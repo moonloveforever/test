@@ -1,0 +1,11 @@
+查看当前有的容器列表
+docker images
+
+启动centos容器并，进入centos命令界面
+docker run -t -i centos bash
+
+打印docker容器信息
+docker ps -a
+
+查看当前容器信息
+docker inspect centos

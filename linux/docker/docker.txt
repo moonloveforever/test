@@ -1,0 +1,27 @@
+#查看当前有的容器列表
+docker images
+
+#启动centos容器并，进入centos命令界面
+docker run -t -i centos bash
+
+#打印docker容器信息
+docker ps -a
+
+#查看当前容器信息
+docker inspect centos
+
+#docker 启动zookeeper容器
+docker run --name my_zookeeper -d zookeeper:latest
+
+
+----------------------------------docker zookeeper集群环境搭建  start --------------------------------------------------
+#创建测试目录
+mkdir  dockertest
+
+#创建docker-compose.yml文件
+mkdir docker-compose.yml
+
+#输入内容
+vim docker-compose.yml
+#保存退出
+:wq

@@ -1,5 +1,17 @@
+#启动docker服务
+systemctl start docker
+
 #查看当前有的容器列表
 docker images
+
+#删除所有容器
+docker rm $(docker ps -a -q)
+
+#删除images，通过image的id来指定删除谁
+docker rmi <image id>
+
+#删除所有images
+docker rmi $(docker images -q)
 
 #启动centos容器并，进入centos命令界面
 docker run -t -i centos bash
@@ -25,3 +37,14 @@ mkdir docker-compose.yml
 vim docker-compose.yml
 #保存退出
 :wq
+
+#接着我们在 docker-compose.yml 当前目录下运行:
+启动
+COMPOSE_PROJECT_NAME=zk_test docker-compose up
+停止
+COMPOSE_PROJECT_NAME=zk_test docker-compose down
+
+#执行上述命令成功后, 接着在另一个终端中运行 docker-compose ps 命令可以查看启动的 ZK 容器:
+COMPOSE_PROJECT_NAME=zk_test docker-compose ps
+
+----------------------------------docker zookeeper集群环境搭建  end --------------------------------------------------

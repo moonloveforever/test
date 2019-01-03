@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>test-jvm</module>
+        <module>test-zookeeper</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

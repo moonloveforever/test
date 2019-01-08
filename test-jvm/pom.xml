@@ -11,5 +11,9 @@
 
     <artifactId>test-jvm</artifactId>
 
+    <properties>
+        <java.version>1.7</java.version>
+    </properties>
+
 
 </project>
